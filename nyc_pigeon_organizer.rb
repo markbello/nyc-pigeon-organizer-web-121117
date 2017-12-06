@@ -14,7 +14,7 @@ def nyc_pigeon_organizer(data)
       end
       data[key].keys.each{|inner_key|
         if data[key][inner_key].include?(name)
-          new_hash[name][key] << inner_key
+          new_hash[name][key] << inner_key.to_s
         end
         binding.pry
       }
