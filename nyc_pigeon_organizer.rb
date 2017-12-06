@@ -11,8 +11,12 @@ def nyc_pigeon_organizer(data)
     data.keys.each{|key|
       if !new_hash[name][key]
         new_hash[name][key] = []
-        binding.pry
       end
+      data[key].keys.each{|inner_key|
+        if data[key][inner_key].include?(name)
+          new_hash[name][key] << inner_key
+        end
+      }
     }
   }
 end
