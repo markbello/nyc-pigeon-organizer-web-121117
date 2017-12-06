@@ -8,7 +8,7 @@ def nyc_pigeon_organizer(data)
     end
     }
   new_hash.keys.each {|name|
-    data.each{|key|
+    data.keys.each{|key|
       if !new_hash[name][key]
         new_hash[name][key] = []
         binding.pry
